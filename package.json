@@ -5,10 +5,22 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "keywords": [
+    "cypress",
+    "automation",
+    "ai",
+    "test generation",
+    "cypress tests",
+    "natural language",
+    "llm",
+    "cli tool",
+    "test automation",
+    "openai",
+    "cypress-genie",
+    "cypress-genie-ai"
+  ],
+  "author": "Arthi Siva",
+  "description": "AI CLI tool that generates Cypress test scripts from natural language scenarios and a URL",
   "dependencies": {
     "@babel/generator": "^7.28.0",
     "@babel/parser": "^7.28.0",
