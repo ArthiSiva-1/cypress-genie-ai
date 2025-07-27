@@ -114,13 +114,6 @@ export default class LoginPage {
 - Star the repo if you find it useful
 - Follow for updates
 
-## Roadmap 🗺️
-
-- [ ] Support for dynamic content loading
-- [ ] Custom selector strategies
-- [ ] Integration with CI/CD platforms
-- [ ] Test data management
-- [ ] Visual regression testing support
 
 ## Acknowledgments 🙏
 
