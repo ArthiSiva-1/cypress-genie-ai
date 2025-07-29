@@ -5,6 +5,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ArthiSiva-1/cypress-genie-ai.git"
+  },
+  "bugs": {
+  "url": "https://github.com/ArthiSiva-1/cypress-genie-ai/issues"
+},
+"homepage": "https://github.com/ArthiSiva-1/cypress-genie-ai#readme",
   "keywords": [
     "cypress",
     "automation",
