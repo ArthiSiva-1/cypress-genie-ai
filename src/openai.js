@@ -27,13 +27,14 @@ Task:
 
 Requirements for Page Objects:
 1. Each class MUST:
-   - Start with 'export default class ClassName'
+   - Start with 'class ClassName'
    - Follow PascalCase naming (e.g., HomePage, SearchResultsPage, ProductDetailsPage)
    - Include elements object with getters using arrow functions
    - Have methods for ALL possible actions on that page
    - Include assertions in EVERY action method
    - Return 'this' for method chaining
    - Use stable selectors (data-testid, id, etc.)
+   - while ending the class should create an instance and export it. Refer the below example for Page Object structure
 
 2. Test file must:
    - Use correct relative imports for ALL page objects
