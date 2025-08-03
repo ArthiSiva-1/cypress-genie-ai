@@ -35,6 +35,13 @@ Requirements for Page Objects:
    - Return 'this' for method chaining
    - Use stable selectors (data-testid, id, etc.)
    - while ending the class should create an instance and export it. Refer the below example for Page Object structure
+ Use the following Selector Strategy (in order):
+    1. Prefer [data-testid] if available
+    2. Else, use unique ID
+    3. Else, use unique class or ARIA attribute
+    4. As a last resort, use cy.contains() with visible text
+   - Avoid generic class names, nth-child, and deeply nested selectors
+   - For repeated components, use cy.get().eq(index) or cy.get().each() appropriately
 
 2. Test file must:
    - Use correct relative imports for ALL page objects
