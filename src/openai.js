@@ -43,7 +43,7 @@ Requirements for Page Objects:
    - Cover the complete user journey
 
 Example Page Object Structure:
-export default class ProductPage {
+class ProductPage {
   elements = {
     searchInput: () => cy.get('[data-testid="search-input"]'),
     filterDropdown: () => cy.get('#filter-options'),
@@ -66,6 +66,9 @@ export default class ProductPage {
     return this;
   }
 }
+const productPage = new ProductPage();
+export default productPage;
+ 
 
 Example Test Structure:
 import ProductPage from '../../support/page-objects/ProductPage';
