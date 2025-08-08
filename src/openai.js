@@ -43,12 +43,18 @@ Requirements for Page Objects:
    - Avoid generic class names, nth-child, and deeply nested selectors
    - For repeated components, use cy.get().eq(index) or cy.get().each() appropriately
 
+   - Match user actions described in the scenario with visible UI elements in the DOM
+   - Prefer elements with contextually matching labels, aria-labels, placeholder, button text, etc.
+   - For dynamic elements or components rendered post-navigation, check corresponding DOM snapshot from navigationHistory
+   - Pick the asserted element that best matches the user action from the DOM snapshot and navigation history
+
 2. Test file must:
    - Use correct relative imports for ALL page objects
    - Include comprehensive assertions
    - Have proper beforeEach/afterEach hooks
    - Follow Cypress best practices
    - Cover the complete user journey
+   - Include all possible scenarios from the scenario (Eg: Positive, Negative, Edge cases, etc.)
 
 Example Page Object Structure:
 class ProductPage {
