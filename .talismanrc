@@ -2,7 +2,9 @@ fileignoreconfig:
 - filename: README.md
   checksum: cf8e7f3da88e02e3d37b51469b70e70491802a6ff0dd93d3645ff7a151d06ebc
 - filename: package-lock.json
-  checksum: 39262f14b5bebc552875f412585a1cf64f0d2f2f3d9683982df6f3ffc221c01e
+  checksum: 97d2de787a1edc57c9dd29a3cc5a0852341a2b48f02f27d743f243029157caee
+- filename: src/generator.js
+  checksum: ef944e4e1c726a2f77cc43dd4e2527b33757a4b178f0a467d0b50472a3d8524b
 - filename: src/openai.js
   checksum: 7dabfeb033ff5b02d2c6edbc42030aa4f8cb07771792f4f3e67f222591625f3c
 version: "1.0"

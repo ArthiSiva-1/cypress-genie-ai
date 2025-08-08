@@ -4,11 +4,27 @@ const { extractHTML, getNavigationHistory, closeBrowser } = require('../src/brow
 const { generateTest } = require('../src/openai');
 const { saveTest } = require('../src/generator');
 
+
+const fs = require('fs');
+const path = require('path');
+const slugify = require('slugify');
+
 const args = process.argv.slice(2);
 const [scenario] = args;
+
 const url = args.find(arg => arg.startsWith('--url='))?.split('=')[1];
+const nameArg = args.find(arg => arg.startsWith('--name='))?.split('=')[1];
 const outputArg = args.find(arg => arg.startsWith('--output='))?.split('=')[1];
-const outputPath = outputArg || 'cypress/e2e/spec/generated.spec.js';
+
+const customName = nameArg ? slugify(nameArg, { lower: true, strict: true }) : null;
+const outputPath = outputArg || `cypress/e2e/spec/${customName || 'generated'}.spec.js`;
+
+
+// const args = process.argv.slice(2);
+// const [scenario] = args;
+// const url = args.find(arg => arg.startsWith('--url='))?.split('=')[1];
+// const outputArg = args.find(arg => arg.startsWith('--output='))?.split('=')[1];
+// const outputPath = outputArg || 'cypress/e2e/spec/generated.spec.js';
 
 if (!scenario || !url) {
   console.log('Usage: cypress-genie-ai "scenario" --url=https://example.com');
